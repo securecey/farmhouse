@@ -4,11 +4,7 @@ This is a modern farmhouse website application designed to showcase and drive bo
 
 The website features a sophisticated design system with earthy colors (olive greens, terracotta, warm creams), smooth animations, and interactive elements to showcase the property's unique offerings including private pools, organic farm access, event spaces, and luxury accommodations.
 
-**Latest Update (Aug 7, 2025)**: 
-- ✅ Added custom video background to hero section 
-- ✅ Configured GitHub Pages deployment with automated CI/CD pipeline
-- ✅ Fixed header transparency issue - now displays solid white background
-- ✅ Implemented comprehensive PWA features with offline support and app installation
+**Latest Update (Aug 7, 2025)**: Added custom video background to hero section and configured for GitHub Pages deployment with automated CI/CD pipeline.
 
 # User Preferences
 
@@ -55,7 +51,6 @@ Preferred communication style: Simple, everyday language.
 - **Video Assets**: Custom hero video (hero-video.webm) for immersive background
 - **Communication**: WhatsApp Business API integration for customer inquiries
 - **Development Tools**: Replit-specific plugins for development, GitHub Actions for CI/CD
-- **PWA Features**: Service Worker for offline caching, Web App Manifest for installation, Background sync for offline form submissions
 
 ## Deployment Configuration
 - **GitHub Pages**: Automated deployment via GitHub Actions workflow
