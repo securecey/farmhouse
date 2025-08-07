@@ -1,18 +1,7 @@
 import { useIsMobile } from "@/hooks/use-mobile";
-import { useState, useEffect } from "react";
 
 export default function FloatingCTA() {
   const isMobile = useIsMobile();
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 300);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const whatsappMessage = encodeURIComponent(
     "Hi, I'd like to book a stay at Serenity Farmhouse. Please provide me with availability and pricing details."
@@ -31,16 +20,6 @@ export default function FloatingCTA() {
 
   return (
     <>
-      {/* Fixed Desktop Book Now Button */}
-      {!isMobile && isScrolled && (
-        <button
-          onClick={() => scrollToSection("booking")}
-          className="fixed top-6 right-6 bg-terracotta hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl z-50 animate-slide-in-right"
-        >
-          <i className="fas fa-calendar mr-2"></i>Book Now
-        </button>
-      )}
-
       {/* Floating WhatsApp Button */}
       <a
         href={`https://wa.me/919123456789?text=${whatsappMessage}`}

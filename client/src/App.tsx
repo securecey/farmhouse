@@ -8,11 +8,8 @@ import StaticHome from "@/pages/static-home";
 import NotFound from "@/pages/not-found";
 
 function AppRouter() {
-  // Use different base paths for development vs production
-  const basePath = import.meta.env.MODE === 'development' ? '/' : '/farmhouse';
-  
   return (
-    <WouterRouter base={basePath}>
+    <WouterRouter base="/farmhouse">
       <Switch>
         <Route path="/" component={StaticHome}/>
         <Route path="/home" component={Home}/>

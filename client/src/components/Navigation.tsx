@@ -29,7 +29,7 @@ export default function Navigation() {
   return (
     <nav
       className={cn(
-        "absolute top-0 w-full z-50 transition-all duration-300",
+        "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled ? "bg-white/98 shadow-lg" : "bg-white/95 backdrop-blur-md shadow-lg"
       )}
     >
@@ -77,8 +77,15 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* CTA Button - Desktop (hidden, we'll use fixed button instead) */}
-          <div className="hidden"></div>
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <button
+              onClick={() => scrollToSection("booking")}
+              className="bg-terracotta hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+            >
+              Book Now
+            </button>
+          </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
