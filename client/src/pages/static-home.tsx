@@ -6,6 +6,7 @@ import Testimonials from "@/components/Testimonials";
 import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import PWAInstallPrompt from "@/components/PWAInstallPrompt";
 
 export default function StaticHome() {
   return (
@@ -20,6 +21,7 @@ export default function StaticHome() {
       </main>
       <Footer />
       <FloatingCTA />
+      <PWAInstallPrompt />
     </div>
   );
 }

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useOfflineStorage } from "@/hooks/use-offline-storage";
+import { Wifi, WifiOff } from "lucide-react";
 
 export default function BookingForm() {
   const { toast } = useToast();
+  const { isOnline, addOfflineData } = useOfflineStorage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,11 +35,21 @@ export default function BookingForm() {
       return;
     }
 
-    // Here you would integrate with your booking system
-    toast({
-      title: "Booking Request Sent!",
-      description: "We'll get back to you within 24 hours to confirm your reservation.",
-    });
+    // Handle offline/online booking submission
+    if (!isOnline) {
+      // Save for later sync when online
+      addOfflineData(formData, 'booking');
+      toast({
+        title: "Booking Saved Offline",
+        description: "Your booking will be sent when you're back online.",
+      });
+    } else {
+      // Here you would integrate with your booking system
+      toast({
+        title: "Booking Request Sent!",
+        description: "We'll get back to you within 24 hours to confirm your reservation.",
+      });
+    }
 
     // Reset form
     setFormData({
@@ -68,9 +81,19 @@ export default function BookingForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Booking Form */}
           <div className="bg-cream rounded-xl p-8 shadow-xl">
-            <h3 className="font-playfair text-2xl font-semibold text-olive mb-6">
-              Reserve Now
-            </h3>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="font-playfair text-2xl font-semibold text-olive">
+                Reserve Now
+              </h3>
+              <div className={`flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium ${
+                isOnline 
+                  ? 'bg-green-100 text-green-700' 
+                  : 'bg-amber-100 text-amber-700'
+              }`}>
+                {isOnline ? <Wifi className="w-3 h-3" /> : <WifiOff className="w-3 h-3" />}
+                {isOnline ? 'Online' : 'Offline Mode'}
+              </div>
+            </div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>

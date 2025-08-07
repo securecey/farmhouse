@@ -1,0 +1,25 @@
+{
+  "name": "Serenity Farmhouse - Luxury Farm Living",
+  "short_name": "Serenity Farmhouse",
+  "description": "Experience luxury farm living with nature's tranquility at Serenity Farmhouse. Book your premium getaway today.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5dc",
+  "theme_color": "#6b7280",
+  "orientation": "portrait-primary",
+  "categories": ["travel", "lifestyle", "hospitality"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ]
+}
