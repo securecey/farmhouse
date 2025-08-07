@@ -9,7 +9,7 @@ import NotFound from "@/pages/not-found";
 
 function AppRouter() {
   return (
-    <WouterRouter base="/farmhouse">
+    <WouterRouter base={import.meta.env.BASE_URL}>
       <Switch>
         <Route path="/" component={StaticHome}/>
         <Route path="/home" component={Home}/>
