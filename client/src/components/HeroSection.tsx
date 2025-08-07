@@ -78,23 +78,23 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* USPs */}
+        {/* USPs - Simplified */}
         <div
-          className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 ${
+          className={`mt-12 flex flex-wrap justify-center gap-8 text-sm ${
             isLoaded ? "animate-fade-in" : "opacity-0"
           }`}
         >
-          <div className="text-center">
-            <i className="fas fa-leaf text-3xl mb-3 text-terracotta"></i>
-            <h3 className="font-semibold text-lg">Reconnect with Nature</h3>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
+            <i className="fas fa-leaf text-terracotta"></i>
+            <span>Nature Escape</span>
           </div>
-          <div className="text-center">
-            <i className="fas fa-users text-3xl mb-3 text-terracotta"></i>
-            <h3 className="font-semibold text-lg">Host Private Events</h3>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
+            <i className="fas fa-swimming-pool text-terracotta"></i>
+            <span>Private Pool</span>
           </div>
-          <div className="text-center">
-            <i className="fas fa-heart text-3xl mb-3 text-terracotta"></i>
-            <h3 className="font-semibold text-lg">Relax with Loved Ones</h3>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
+            <i className="fas fa-seedling text-terracotta"></i>
+            <span>Organic Farm</span>
           </div>
         </div>
       </div>

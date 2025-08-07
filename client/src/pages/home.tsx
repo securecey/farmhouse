@@ -10,14 +10,15 @@ import FloatingCTA from "@/components/FloatingCTA";
 
 export default function Home() {
   return (
-    <div className="font-poppins bg-cream">
+    <div className="min-h-screen bg-cream">
       <Navigation />
-      <HeroSection />
-      <FacilitiesShowcase />
-      <Gallery />
-      <VirtualTour />
-      <Testimonials />
-      <BookingForm />
+      <main>
+        <HeroSection />
+        <FacilitiesShowcase />
+        <Gallery />
+        <Testimonials />
+        <BookingForm />
+      </main>
       <Footer />
       <FloatingCTA />
     </div>

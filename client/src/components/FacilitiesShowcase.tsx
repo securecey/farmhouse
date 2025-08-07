@@ -1,5 +1,5 @@
 export default function FacilitiesShowcase() {
-  const facilities = [
+  const mainFacilities = [
     {
       icon: "fas fa-swimming-pool",
       title: "Private Pool",
@@ -12,13 +12,8 @@ export default function FacilitiesShowcase() {
     },
     {
       icon: "fas fa-bed",
-      title: "AC Rooms & Cottages",
+      title: "Luxury Cottages",
       description: "Comfortable air-conditioned accommodation with modern amenities and rustic charm",
-    },
-    {
-      icon: "fas fa-child",
-      title: "Kids Play Area",
-      description: "Safe and fun playground with swings, slides, and nature-based activities",
     },
     {
       icon: "fas fa-fire",
@@ -26,25 +21,20 @@ export default function FacilitiesShowcase() {
       description: "Evening bonfire experiences with barbecue facilities for memorable gatherings",
     },
     {
-      icon: "fas fa-utensils",
-      title: "Indoor & Outdoor Dining",
-      description: "Flexible dining options with farm-to-table meals in beautiful settings",
-    },
-    {
       icon: "fas fa-calendar-alt",
-      title: "Event Lawn & Stage",
-      description: "Spacious event area perfect for weddings, parties, and corporate gatherings",
+      title: "Event Spaces",
+      description: "Spacious areas perfect for weddings, parties, and corporate gatherings",
     },
     {
-      icon: "fas fa-car",
-      title: "Secure Parking",
-      description: "Ample safe parking space for all vehicles with 24/7 security monitoring",
+      icon: "fas fa-utensils",
+      title: "Farm-to-Table Dining",
+      description: "Flexible dining options with fresh, organic meals in beautiful settings",
     },
-    {
-      icon: "fas fa-shield-alt",
-      title: "24/7 Security & Power",
-      description: "Round-the-clock security and uninterrupted power backup for your peace of mind",
-    },
+  ];
+
+  const additionalFeatures = [
+    "Kids Play Area", "Secure Parking", "24/7 Security", "Power Backup", 
+    "WiFi Access", "Event Support", "Catering Services", "Photography Areas"
   ];
 
   return (
@@ -59,14 +49,15 @@ export default function FacilitiesShowcase() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {facilities.map((facility, index) => (
+        {/* Main Facilities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {mainFacilities.map((facility, index) => (
             <div
               key={index}
-              className="card-hover-effect bg-cream rounded-xl p-8 text-center border border-gray-100"
+              className="card-hover-effect bg-white rounded-xl p-8 text-center border border-gray-100 shadow-sm"
             >
-              <div className="w-16 h-16 bg-olive/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i className={`${facility.icon} text-2xl text-olive`}></i>
+              <div className="w-20 h-20 bg-olive/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className={`${facility.icon} text-3xl text-olive`}></i>
               </div>
               <h3 className="font-playfair text-xl font-semibold text-dark-gray mb-3">
                 {facility.title}
@@ -74,6 +65,21 @@ export default function FacilitiesShowcase() {
               <p className="text-gray-600">{facility.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Additional Features */}
+        <div className="bg-white rounded-2xl p-8 shadow-sm">
+          <h3 className="font-playfair text-2xl font-semibold text-olive mb-6 text-center">
+            Additional Amenities
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {additionalFeatures.map((feature, index) => (
+              <div key={index} className="flex items-center gap-3 p-3 bg-cream rounded-lg">
+                <i className="fas fa-check-circle text-terracotta"></i>
+                <span className="text-sm font-medium text-dark-gray">{feature}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

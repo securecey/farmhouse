@@ -48,7 +48,7 @@ export default function Gallery() {
 
   const tabs = [
     { id: "photos", label: "Photos", icon: "fas fa-camera" },
-    { id: "videos", label: "Videos", icon: "fas fa-video" },
+    { id: "videos", label: "Virtual Tours", icon: "fas fa-video" },
     { id: "drone", label: "Drone Views", icon: "fas fa-helicopter" },
   ];
 
@@ -111,23 +111,61 @@ export default function Gallery() {
           </div>
         )}
 
-        {/* Videos Tab */}
+        {/* Virtual Tours Tab */}
         {activeTab === "videos" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-              <div className="aspect-video bg-gradient-to-br from-olive to-terracotta flex items-center justify-center">
-                <div className="text-center text-white">
-                  <i className="fas fa-play-circle text-6xl mb-4"></i>
-                  <h3 className="text-xl font-semibold">Property Walkthrough</h3>
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* 360° Tour */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                <div className="aspect-video bg-gradient-to-br from-olive to-terracotta flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <i className="fas fa-360-degrees text-6xl mb-4"></i>
+                    <h3 className="text-xl font-semibold mb-2">360° Virtual Tour</h3>
+                    <p className="text-sm opacity-90 mb-4">Interactive walkthrough</p>
+                    <button className="bg-white text-olive px-6 py-2 rounded-full font-semibold hover:bg-cream transition-colors">
+                      Start Tour
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Video Tour */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                <div className="aspect-video bg-gradient-to-br from-terracotta to-olive flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <i className="fas fa-play-circle text-6xl mb-4"></i>
+                    <h3 className="text-xl font-semibold mb-2">Cinematic Tour</h3>
+                    <p className="text-sm opacity-90 mb-4">Professional video walkthrough</p>
+                    <button className="bg-white text-olive px-6 py-2 rounded-full font-semibold hover:bg-cream transition-colors">
+                      Watch Video
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-              <div className="aspect-video bg-gradient-to-br from-terracotta to-olive flex items-center justify-center">
-                <div className="text-center text-white">
-                  <i className="fas fa-play-circle text-6xl mb-4"></i>
-                  <h3 className="text-xl font-semibold">Guest Experiences</h3>
+            
+            {/* Tour Features */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                <div className="w-12 h-12 bg-olive/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-eye text-lg text-olive"></i>
                 </div>
+                <h4 className="font-semibold text-dark-gray mb-2">Immersive Experience</h4>
+                <p className="text-sm text-gray-600">Explore every corner with interactive views</p>
+              </div>
+              <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                <div className="w-12 h-12 bg-olive/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-mobile-alt text-lg text-olive"></i>
+                </div>
+                <h4 className="font-semibold text-dark-gray mb-2">Mobile Friendly</h4>
+                <p className="text-sm text-gray-600">Experience on any device, anywhere</p>
+              </div>
+              <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                <div className="w-12 h-12 bg-olive/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className="fas fa-clock text-lg text-olive"></i>
+                </div>
+                <h4 className="font-semibold text-dark-gray mb-2">Available 24/7</h4>
+                <p className="text-sm text-gray-600">Take the tour anytime at your convenience</p>
               </div>
             </div>
           </div>
