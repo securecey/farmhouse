@@ -1,0 +1,168 @@
+Design a **modern, immersive, and conversion-optimized farmhouse website** that visually captivates users while driving **bookings and enquiries**. The experience should feel **premium, peaceful, and intuitive**, with a focus on **nature-inspired aesthetics**, fast loading times, and seamless responsiveness across all devices.
+>
+> The site should incorporate **smooth animations**, **cinematic videos**, and **interactive elements** to showcase the property’s unique offerings. Use a refined color palette of **earthy greens, warm beiges, wood textures**, and subtle golden accents to reflect natural luxury. Typography should be elegant and readable, using fonts like **Poppins**, **Lora**, or **Playfair Display**.
+>
+> The overall UI must feel **polished, emotionally engaging**, and **strategically designed to convert visitors into guests**.
+
+---
+
+### 🧩 **Updated Structure & Feature Breakdown**
+
+#### 1️⃣ **Homepage / Landing Area**
+
+* **Fullscreen cinematic hero section** with autoplay background **video or image slider** (e.g., drone footage).
+* Clear value proposition headline like:
+  **"Your Peaceful Getaway in Nature Starts Here."**
+* Prominent **CTA buttons**:
+
+  * `Book Now`
+  * `Schedule Visit`
+  * `Call Us` (mobile-friendly with tap-to-call)
+* Subtle parallax scroll revealing key USPs:
+
+  * Reconnect with nature
+  * Host private events
+  * Relax with family and friends
+
+---
+
+#### 2️⃣ **Facilities Showcase**
+
+* **Icon-based animated cards** in a grid or carousel:
+
+  * ✅ Private Pool
+  * ✅ Organic Farm Access
+  * ✅ AC Rooms & Cottages
+  * ✅ Kids Play Area
+  * ✅ Bonfire & BBQ Zone
+  * ✅ Indoor & Outdoor Dining
+  * ✅ Event Lawn & Stage Area
+  * ✅ Secure Parking
+  * ✅ 24/7 Power Backup & Security
+* **Hover effects**: smooth zoom, light pulse, or micro-animation
+* Each card features:
+
+  * Icon/illustration
+  * Short title + 1-line benefit description
+  * Optional media on hover (GIF, short clip)
+
+---
+
+#### 3️⃣ **Gallery Section**
+
+* **Tabbed interface** for:
+
+  * 📸 Photos
+  * 🎥 Videos
+  * 🚁 Drone Views
+* Masonry or grid layout with responsive scaling
+* **Hover effects**:
+
+  * Zoom-in
+  * Light fade
+  * Overlay text (optional)
+* Fullscreen **lightbox preview** with swipe support
+
+---
+
+#### 4️⃣ **Virtual Tour**
+
+* Embed an interactive **360° virtual walkthrough** (e.g., Momento360, Kuula)
+* Cinematic YouTube or Vimeo embed below
+* Optional full-width toggle for immersive view
+
+---
+
+#### 5️⃣ **Booking & Enquiry Form**
+
+* Clean, mobile-first form with clear labels and progress animation
+* Fields:
+
+  * Name, Email, Phone
+  * Preferred Date & Time
+  * Visit Purpose: Stay | Event | Photoshoot
+  * Special Notes / Requests
+* **Sticky mobile CTA** or floating button for quick booking
+* Integrate:
+
+  * WhatsApp (prefilled message)
+  * Tap-to-call
+  * Auto-response email on form submit
+
+---
+
+#### 6️⃣ **Testimonials / Social Proof**
+
+* Auto-rotating **testimonial slider** with:
+
+  * Guest name, rating stars, short review
+  * Circular photo (optional)
+* Optional Instagram/Facebook feed embed
+* Google Reviews widget badge
+
+---
+
+#### 7️⃣ **Map & Location**
+
+* Embedded **Google Maps** with:
+
+  * Branded pin marker
+  * “Get Directions” button
+* Highlight:
+
+  * Distance from nearby cities or highways
+  * Nearby attractions (e.g., lakes, hills, markets)
+
+---
+
+#### 8️⃣ **Live Chat (Optional)**
+
+* WhatsApp floating button (with greeting message)
+* Optional chatbot via **Tidio**, **Crisp**, or **Messenger**
+* Show during active hours or trigger on scroll
+
+---
+
+#### 9️⃣ **Fully Responsive Design**
+
+* Adaptive layout for phones, tablets, and desktops
+* Touch-friendly:
+
+  * Swiping galleries
+  * Sticky mobile nav bar with icons
+* Click-to-call, click-to-chat, and smart scroll snapping
+
+---
+
+#### 🔟 **Modern UI/UX Enhancements**
+
+* **Color Theme**:
+
+  * Primary: Olive Green `#6B8E23`
+  * Accent: Terracotta/Amber `#D2691E`
+  * Base: Soft Cream/Beige `#FAF9F6`
+* **Typography**:
+
+  * Headlines: Playfair Display or Lora
+  * Body: Poppins or Open Sans
+* **UI Styling**:
+
+  * Rounded cards, soft shadows
+  * Section dividers with scroll effects
+  * Animated section entrances using AOS/GSAP
+
+---
+
+#### 🔍 **SEO & Analytics Setup (Optional)**
+
+* Meta titles and descriptions for all major pages
+* Structured data for LocalBusiness
+* Google Analytics 4 + Meta Pixel
+* Event tracking for CTAs, form submissions, and WhatsApp clicks
+
+---
+
+
+* **Preloader animation** with logo
+* **Seasonal themes** (summer greenery, monsoon mist, etc.)
+
