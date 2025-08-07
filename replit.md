@@ -4,6 +4,8 @@ This is a modern farmhouse website application designed to showcase and drive bo
 
 The website features a sophisticated design system with earthy colors (olive greens, terracotta, warm creams), smooth animations, and interactive elements to showcase the property's unique offerings including private pools, organic farm access, event spaces, and luxury accommodations.
 
+**Latest Update (Aug 7, 2025)**: Added custom video background to hero section and configured for GitHub Pages deployment with automated CI/CD pipeline.
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
@@ -42,9 +44,16 @@ Preferred communication style: Simple, everyday language.
 
 ## External Dependencies
 - **Database Provider**: Neon Database (serverless PostgreSQL)
-- **Deployment Platform**: Replit with custom development tooling integration
+- **Deployment Platform**: Dual deployment support - Replit for development and GitHub Pages for production
 - **Font Services**: Google Fonts API for Playfair Display and Poppins
 - **Icon Library**: Font Awesome CDN for comprehensive iconography
 - **Image Assets**: Unsplash for high-quality placeholder imagery
+- **Video Assets**: Custom hero video (hero-video.webm) for immersive background
 - **Communication**: WhatsApp Business API integration for customer inquiries
-- **Development Tools**: Replit-specific plugins for error handling and cartographer integration
+- **Development Tools**: Replit-specific plugins for development, GitHub Actions for CI/CD
+
+## Deployment Configuration
+- **GitHub Pages**: Automated deployment via GitHub Actions workflow
+- **Static Build**: Optimized Vite configuration for static site generation
+- **Asset Optimization**: Manual chunks for vendor and UI libraries for better loading performance
+- **Build Command**: `npx vite build --config vite.config.github.ts`
