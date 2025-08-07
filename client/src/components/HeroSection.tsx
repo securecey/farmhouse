@@ -41,15 +41,14 @@ export default function HeroSection() {
             isLoaded ? "animate-fade-in" : "opacity-0"
           }`}
         >
-          Your Peaceful Getaway in Nature Starts Here
+          Serenity Farmhouse
         </h1>
         <p
           className={`text-xl md:text-2xl mb-8 text-shadow opacity-90 ${
             isLoaded ? "animate-slide-up" : "opacity-0"
           }`}
         >
-          Escape to luxury farm living with private pool, organic experiences,
-          and premium cottages nestled in pristine nature
+          Luxury farm living with nature's tranquility
         </p>
 
         {/* CTA Buttons */}
