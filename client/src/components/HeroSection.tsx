@@ -30,17 +30,24 @@ export default function HeroSection() {
         muted
         loop
         playsInline
+        onError={(e) => console.error('Video failed to load:', e)}
+        onLoadStart={() => console.log('Video loading started')}
+        onCanPlay={() => console.log('Video can start playing')}
       >
-        <source src="/attached_assets/Untitled Project_1754541279207.webm" type="video/webm" />
-        {/* Fallback background image */}
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
-          }}
-        ></div>
+        <source src="/hero-video.webm" type="video/webm" />
+        Your browser does not support the video tag.
       </video>
+      
+      {/* Fallback background image - shows if video fails */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
+          zIndex: -1
+        }}
+      ></div>
+      
       <div className="absolute inset-0 gradient-overlay"></div>
 
       {/* Hero Content */}
