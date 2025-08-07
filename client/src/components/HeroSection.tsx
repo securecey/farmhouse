@@ -34,7 +34,7 @@ export default function HeroSection() {
         onLoadStart={() => console.log('Video loading started')}
         onCanPlay={() => console.log('Video can start playing')}
       >
-        <source src="/hero-video.webm" type="video/webm" />
+        <source src={import.meta.env.BASE_URL + "hero-video.webm"} type="video/webm" />
         Your browser does not support the video tag.
       </video>
       
