@@ -23,16 +23,25 @@ export default function HeroSection() {
       id="home"
       className="relative h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Video/Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center parallax-bg"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
-        }}
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
       >
-        <div className="absolute inset-0 gradient-overlay"></div>
-      </div>
+        <source src="/attached_assets/Untitled Project_1754541279207.webm" type="video/webm" />
+        {/* Fallback background image */}
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
+          }}
+        ></div>
+      </video>
+      <div className="absolute inset-0 gradient-overlay"></div>
 
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
