@@ -31,8 +31,9 @@ jobs:
       
     - name: Build for GitHub Pages
       run: |
-        export VITE_STATIC_BUILD=true
         npx vite build --config vite.config.github.ts
+      env:
+        VITE_STATIC_BUILD: true
       
     - name: Setup Pages
       uses: actions/configure-pages@v4

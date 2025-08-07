@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // Important for GitHub Pages relative paths
+  base: "/farmhouse/", // GitHub Pages subfolder path
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

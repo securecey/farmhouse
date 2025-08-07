@@ -10,7 +10,8 @@ import NotFound from "@/pages/not-found";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={import.meta.env.VITE_STATIC_BUILD === 'true' ? StaticHome : Home}/>
+      <Route path="/" component={StaticHome}/>
+      <Route path="/home" component={Home}/>
       <Route component={NotFound} />
     </Switch>
   );
