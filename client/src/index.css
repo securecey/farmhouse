@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(45, 50%, 98%);
+  --foreground: hsl(32, 20%, 25%);
+  --card: hsl(45, 50%, 97%);
+  --card-foreground: hsl(32, 20%, 25%);
+  --popover: hsl(45, 50%, 98%);
+  --popover-foreground: hsl(32, 20%, 25%);
+  --primary: hsl(78, 69%, 34%);
+  --primary-foreground: hsl(45, 50%, 98%);
+  --secondary: hsl(32, 20%, 25%);
+  --secondary-foreground: hsl(45, 50%, 98%);
+  --muted: hsl(32, 15%, 85%);
+  --muted-foreground: hsl(32, 20%, 25%);
+  --accent: hsl(45, 40%, 92%);
+  --accent-foreground: hsl(78, 69%, 34%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(45, 50%, 98%);
+  --border: hsl(32, 15%, 85%);
+  --input: hsl(45, 40%, 95%);
+  --ring: hsl(78, 69%, 34%);
+  --chart-1: hsl(78, 69%, 34%);
+  --chart-2: hsl(159, 100%, 36%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 78%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --sidebar: hsl(45, 50%, 97%);
+  --sidebar-foreground: hsl(32, 20%, 25%);
+  --sidebar-primary: hsl(78, 69%, 34%);
+  --sidebar-primary-foreground: hsl(45, 50%, 98%);
+  --sidebar-accent: hsl(45, 40%, 92%);
+  --sidebar-accent-foreground: hsl(78, 69%, 34%);
+  --sidebar-border: hsl(32, 15%, 85%);
+  --sidebar-ring: hsl(78, 69%, 34%);
+  
+  /* Farmhouse Theme Colors */
+  --olive: hsl(75, 60%, 34%);
+  --terracotta: hsl(20, 67%, 46%);
+  --cream: hsl(45, 50%, 98%);
+  --warm-gray: hsl(39, 23%, 57%);
+  --dark-gray: hsl(0, 0%, 36%);
+  
+  --font-sans: 'Poppins', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1.3rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 1px 2px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 1px 2px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 2px 4px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 4px 6px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 8px 10px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(32, 20%, 8%);
+  --foreground: hsl(45, 50%, 90%);
+  --card: hsl(32, 20%, 10%);
+  --card-foreground: hsl(45, 50%, 85%);
+  --popover: hsl(32, 20%, 8%);
+  --popover-foreground: hsl(45, 50%, 90%);
+  --primary: hsl(78, 69%, 34%);
+  --primary-foreground: hsl(45, 50%, 98%);
+  --secondary: hsl(45, 50%, 95%);
+  --secondary-foreground: hsl(32, 20%, 25%);
+  --muted: hsl(32, 20%, 15%);
+  --muted-foreground: hsl(32, 15%, 60%);
+  --accent: hsl(78, 30%, 12%);
+  --accent-foreground: hsl(78, 69%, 34%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(45, 50%, 98%);
+  --border: hsl(32, 20%, 15%);
+  --input: hsl(32, 20%, 18%);
+  --ring: hsl(78, 69%, 34%);
+  --chart-1: hsl(78, 69%, 34%);
+  --chart-2: hsl(159, 100%, 36%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 78%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --sidebar: hsl(32, 20%, 10%);
+  --sidebar-foreground: hsl(45, 50%, 85%);
+  --sidebar-primary: hsl(78, 69%, 34%);
+  --sidebar-primary-foreground: hsl(45, 50%, 98%);
+  --sidebar-accent: hsl(78, 30%, 12%);
+  --sidebar-accent-foreground: hsl(78, 69%, 34%);
+  --sidebar-border: hsl(32, 20%, 20%);
+  --sidebar-ring: hsl(78, 69%, 34%);
+  
+  --font-sans: 'Poppins', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1.3rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 1px 2px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 1px 2px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 2px 4px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 4px 6px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00), 0px 8px 10px -1px hsl(78, 69%, 34% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(78, 69%, 34% / 0.00);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .text-olive {
+    color: var(--olive);
+  }
+  
+  .text-terracotta {
+    color: var(--terracotta);
+  }
+  
+  .text-cream {
+    color: var(--cream);
+  }
+  
+  .text-warm-gray {
+    color: var(--warm-gray);
+  }
+  
+  .text-dark-gray {
+    color: var(--dark-gray);
+  }
+  
+  .bg-olive {
+    background-color: var(--olive);
+  }
+  
+  .bg-terracotta {
+    background-color: var(--terracotta);
+  }
+  
+  .bg-cream {
+    background-color: var(--cream);
+  }
+  
+  .bg-warm-gray {
+    background-color: var(--warm-gray);
+  }
+  
+  .bg-dark-gray {
+    background-color: var(--dark-gray);
+  }
+  
+  .border-olive {
+    border-color: var(--olive);
+  }
+  
+  .border-terracotta {
+    border-color: var(--terracotta);
+  }
+  
+  .hover\:bg-olive:hover {
+    background-color: var(--olive);
+  }
+  
+  .hover\:text-olive:hover {
+    color: var(--olive);
+  }
+  
+  .hover\:bg-terracotta:hover {
+    background-color: var(--terracotta);
+  }
+  
+  .focus\:ring-olive:focus {
+    --tw-ring-color: var(--olive);
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(107, 142, 35, 0.8) 0%, rgba(210, 105, 30, 0.6) 100%);
+  }
+  
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .card-hover-effect {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover-effect:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lightbox-overlay {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
